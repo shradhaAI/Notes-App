@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="background-blobs">
         <div class="blob blob-1"></div>
@@ -17,6 +19,11 @@
     </div>
 
     <div class="app-container">
+        <nav class="glass-nav">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+        </nav>
+
         <header>
             <h1>My Notes</h1>
             <p>Capture your thoughts in style.</p>
@@ -39,7 +46,11 @@
         </div>
 
         <button class="add-note-fab" id="add-note-btn" aria-label="Add new note">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
         </button>
     </div>
 
@@ -52,7 +63,8 @@
             </div>
             <div class="modal-body">
                 <input type="text" id="note-title-input" placeholder="Title" class="glass-input">
-                <textarea id="note-content-input" placeholder="Write something..." class="glass-input custom-scrollbar"></textarea>
+                <textarea id="note-content-input" placeholder="Write something..."
+                    class="glass-input custom-scrollbar"></textarea>
             </div>
             <div class="modal-footer">
                 <button class="btn-cancel" id="cancel-note-btn">Cancel</button>
@@ -63,4 +75,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
