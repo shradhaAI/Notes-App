@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <h1>My Notes</h1>
+            <p>Capture your thoughts in style.</p>
+        </header>
+
+        <div class="notes-grid" id="notes-grid">
+            <!-- Notes will be injected here via JS -->
+            <!-- Example Note for Structure (will be removed by JS) 
+            <div class="note-card">
+                <h3 class="note-title">Project Ideas</h3>
+                <p class="note-content">Build a glassmorphism notes app with local storage...</p>
+                <div class="note-footer">
+                    <span class="note-date">Oct 24</span>
+                    <button class="delete-btn" aria-label="Delete note">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                </div>
+            </div>
+            -->
+        </div>
+
+        <button class="add-note-fab" id="add-note-btn" aria-label="Add new note">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+    </div>
+
+    <!-- Modal for adding notes -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal glass-panel">
+            <div class="modal-header">
+                <h2>New Note</h2>
+                <button class="close-modal-btn" id="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="note-title-input" placeholder="Title" class="glass-input">
+                <textarea id="note-content-input" placeholder="Write something..." class="glass-input custom-scrollbar"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancel-note-btn">Cancel</button>
+                <button class="btn-save" id="save-note-btn">Save Note</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
